@@ -15,15 +15,15 @@
   debug:
     msg: "Either uncomment the postgres setup or manually login and initialize"
 
+- name: initilize postgres
+  command: postgresql-setup initdb
+  when: not pgsql_conf.stat.exists
+
 - name: check file postgresql conf
   template:
     src: postgresql.conf.j2
     path: /var/lib/pgsql/data/postgresql.conf
   register: pgsql_conf
-
-- name: initilize postgres
-  command: postgresql-setup initdb
-  when: not pgsql_conf.stat.exists
 
 - name: start postgres
   service:
