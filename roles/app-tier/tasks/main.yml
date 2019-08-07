@@ -12,7 +12,7 @@
 
 - name: create tomcat default web directory
   file:
-    path: "{{ tomcat_web_root }}"
+    path: /usr/share/tomcat/webapps/ROOT
     state: directory
 
 - name: copy static index.html to tomcat webroot
