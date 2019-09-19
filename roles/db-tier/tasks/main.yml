@@ -24,12 +24,12 @@
   command: postgresql-setup initdb
   when: not pgsql_conf.stat.exists
 
-- name: copy file postgresql conf
-  template:
-    src: postgresql.conf.j2
-    dest: /var/lib/pgsql/data/postgresql.conf
-    force: no
-  register: pgsql_conf
+#- name: copy file postgresql conf
+#  template:
+#    src: postgresql.conf.j2
+#    dest: /var/lib/pgsql/data/postgresql.conf
+#    force: no
+#  register: pgsql_conf
 
 - name: start postgres
   service:
