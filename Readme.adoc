@@ -1,3 +1,8 @@
+==== This is Yasuhiro Yamada's GUID
+OSP_GUID=8c8a
+ANSIBLE_ADVANCE_GUID=991f
+
+
 ==== Ansible Tower Config
 
 
